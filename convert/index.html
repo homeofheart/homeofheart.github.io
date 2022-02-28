@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HOH</title>
+<link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+
+<script>
+function showResult (form) {
+    var res = form.link.value;
+    var element_res = document.getElementById("result"); 
+    var element_newLink = document.getElementById("newLink"); 
+    element_res.setAttribute("style", ""); 
+    element_newLink.innerHTML= "https://colin-cheng.github.io/?link=" + res;
+}
+</script>
+
+</head>
+  
+  
+<body>
+
+  <p>Please enter the original site123 link below, and click "Convert" button. It will give you a new secure link, this new link won't be blocked by WeChat.</p>
+
+  <form name="form" action="" method="GET">
+    <label for="link">Enter your site123 link here:</label><br>
+    <input type="text" id="link" name="link"><br>
+    <input type="button" name="button" value="Convert" onClick="showResult(this.form)">
+  </form>
+
+  <div style="display: none;" id="result">
+    <p>Your secure link is: </p>
+    <p id="newLink" style="color:red; word-wrap: break-word; width: 80%;"></p>
+    <p>You may now copy the link above and use it in Wechat or 公众平台. It won't be blocked.</p>
+  </div>
+
+</body>
+</html>
